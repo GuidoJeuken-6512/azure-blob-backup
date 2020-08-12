@@ -3,7 +3,7 @@
 ## $source must include a valid SAS Token with BLOB RW rights
 ## AzCopy must exist / download it from Microsoft
 ## Guido Jeuken
-## Version 1.0
+## Version 1.1
 ## 2020-8-12
 
 ## configure your values
@@ -11,6 +11,8 @@ $AzCopyPath = "c:\temp\azcopy.exe"
 $source="https://yourstorage.blob.core.windows.net/yourContainer-Name?YourSAS-Key"
 $dest = "d:\backup\dir"
 $optons = " --recursive"
+## if you whant to delete files in the destination if thy have been deleted in the source, enable the next line
+##$optons = $optons + " --delete-destination=true"
 #Mail Server Variables
 $recipients = "error@YourDomain"
 $smtpServer = "YourMailServerNameOrIP"
